@@ -3,8 +3,31 @@
 ## Preview pages
 
 ![loginPage](./.github/imgs/login_preview.png)
-![signUpPage](./.github/imgs/sign-up_preview.png)
+![signUpPage](./.github/imgs/signUp_preview.png)
 ![userDetailsPage](./.github/imgs/user-details_preview.png)
+
+## Build with 🛠
+<hr>
+
+### - React
+### - Css
+### - Nodejs
+### - MongoDB
+
+<br>
+
+## How use
+<hr>
+
+
+### 1º Change the name file ".env_exemple" for ".env" <br><br>
+### 2º Open file .env_exemple and change the variables with your values 
+
+
+### For exemple:
+#### PORT = 3000 <br>
+#### REACT_APP_API_URL = localhost:8080/api
+
 
 ### `npm start`
 
