@@ -1,11 +1,10 @@
-# Getting Started with Create React App
+# Login JWT
 
-# `Login JWT`
+## Preview pages
 
-## `Preview pages`
-
-[loginPage](./.github/imgs/login_preview.png);
-[signUpPage](./.github/imgs/sign-up_preview.png); [userDetailsPage](./.github/imgs/user-details_preview.png);
+![loginPage](./.github/imgs/login_preview.png)
+![signUpPage](./.github/imgs/sign-up_preview.png)
+![userDetailsPage](./.github/imgs/user-details_preview.png)
 
 ### `npm start`
 
