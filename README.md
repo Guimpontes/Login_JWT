@@ -20,13 +20,16 @@
 <hr>
 
 
-### 1º Change the name file ".env_exemple" for ".env" <br><br>
+### 1º Change the file name ".env_exemple" for ".env" <br><br>
 ### 2º Open file .env_exemple and change the variables with your values 
 
 
 ### For exemple:
 #### PORT = 3000 <br>
 #### REACT_APP_API_URL = localhost:8080/api
+<br>
+
+### 3º Open the api in [api repository](https://github.com/Guimpontes/login-jwt_BACKEND)
 
 
 ### `npm start`
