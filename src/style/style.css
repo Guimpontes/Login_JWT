@@ -1,0 +1,256 @@
+:root {
+    --primary-color: linear-gradient(0deg, #ACCBEE 0%, #E7F0FD 100%);
+    /* --primary-color: linear-gradient(60deg, #29323c 0%, #485563 100%); */
+    --secondary-color: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+    --auxiliary-color-one: #B721FF;
+    --auxiliary-color-two: #2E82FF;
+    --auxiliary-color-three: #EAEAEA;
+    --auxiliary-color-four: #75ACFF;
+    --text-color: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-image: var(--primary-color);
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 400px;
+    width: 100%;
+    padding: 0px 5px;
+}
+
+form.login-form,
+form.sign-form {
+    width: 100%;
+    padding: 10px;
+    background-image: var(--secondary-color);
+    border-radius: 15px;
+}
+
+.form-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-color);
+    text-align: center;
+    margin: 35px 0px;
+}
+
+.fields {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 30px;
+}
+
+.password-field {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+
+.fields label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.fields input {
+    width: 100%;
+    height: 50px;
+    border: 1px solid var(--auxiliary-color-two);
+    border-radius: 5px;
+    outline: none;
+    padding: 5px;
+    font-size: 1rem;
+    background-color: var(--auxiliary-color-three);
+}
+
+.password-field input {
+    padding-right: 45px;
+}
+
+.password-field button {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    position: absolute;
+    top: 45px;
+    right: 10px;
+    border: none;
+    background-color: transparent;
+}
+
+.remember-password-field {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 70px;
+    width: max-content;
+}
+
+.remember-password-field input {
+    appearance: none;
+}
+
+.remember-password-field label {
+    margin-left: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.remember-password-field input::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-color: var(--auxiliary-color-three);
+    background-image: url('../assets/icons/check-icon.svg');
+    background-repeat: no-repeat;
+    background-position: -20px;
+    background-size: 12px;
+    border: 2px solid var(--auxiliary-color-two);
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+.remember-password-field input:checked::before {
+    background-position: center;
+    background-color: var(--auxiliary-color-four);
+}
+
+.forgot-password {
+    float: right;
+}
+
+.forgot-password a {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    cursor: none;
+}
+
+#btn-send {
+    width: 130px;
+    height: 45px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-image: linear-gradient(to right, #DA22FF 0%, #9733EE 51%, #DA22FF 100%);
+    background-size: 200% auto;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    transition: 0.5s ease;
+}
+
+#btn-send:hover {
+    background-position: right center;
+}
+
+#btn-send svg {
+    font-size: 1.2rem;
+}
+
+.page-signup-link {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.page-signup-link a {
+    color: var(--auxiliary-color-one);
+    font-weight: 700;
+}
+
+.user-datails {
+    width: 100%;
+    background-image: var(--secondary-color);
+    border-radius: 5px;
+    padding: 20px;
+}
+.user-datails h2 {
+    font-size: 1rem;
+    color: var(--auxiliary-color-three);
+    margin-bottom: 20px;
+}
+.user-datails h2:last-child {
+    margin-bottom: 0;
+}
+.user-datails span {
+    color: #000000;
+}
+
+#btn-logout {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: #000000;
+    color: var(--auxiliary-color-three);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+/*=================== RESPONSIVE ===================*/
+@media screen and (max-width: 350px) {
+
+    .remember-password-field label {
+        font-size: 0.8rem;
+    }
+
+    .forgot-password a {
+        font-size: 0.8rem;
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .remember-password-field input {
+        cursor: pointer;
+    }
+
+    .remember-password-field label {
+        cursor: pointer;
+    }
+
+    .password-field button {
+        cursor: pointer;
+    }
+
+    .forgot-password a {
+        cursor: pointer;
+    }
+
+    #btn-send {
+        cursor: pointer;
+    }
+    
+    #btn-logout {
+        cursor: pointer;
+    }
+}
