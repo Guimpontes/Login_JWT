@@ -1,18 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { Link, useNavigate, } from 'react-router-dom';
 import { RxEnter } from 'react-icons/rx';
 import {
   AiFillEye,
   AiFillEyeInvisible
 } from 'react-icons/ai';
-
+import { Context } from '../../components/context/context';
 
 
 export default function Login() {
   const [checked, setChecked] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [user, setUser] = useState({});
+  const [logged, setLogged] = useContext(Context);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (logged) {
+      navigate("/user-details", { replace: true });
+      console.log(logged)
+    }
+  }, [])
 
   function updateUser(e) {
     const { name, value } = e.target;
@@ -34,8 +42,10 @@ export default function Login() {
 
         if (data.msg) {
           alert(data.msg);
+          setLogged(true);
           navigate("/user-details", { replace: true })
-          localStorage.setItem("token", data.token)
+          localStorage.setItem("token", data.token);
+          localStorage.setItem("logged", true);
         } else {
           alert(data.error)
         }
