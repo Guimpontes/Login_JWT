@@ -19,9 +19,10 @@
 ## How use
 <hr>
 
-
-### 1º Change the file name ".env_exemple" for ".env" <br><br>
-### 2º Open file .env_exemple and change the variables with your values 
+### 1º `npm install` <br><br>
+### 2º Open the api in [api repository](https://github.com/Guimpontes/login-jwt_BACKEND) <br><br>
+### 3º Change the file name ".env_exemple" for ".env" <br><br>
+### 4º Open file .env and change the variables with your values 
 
 
 ### For exemple:
@@ -29,7 +30,6 @@
 #### REACT_APP_API_URL = localhost:8080/api
 <br>
 
-### 3º Open the api in [api repository](https://github.com/Guimpontes/login-jwt_BACKEND)
 
 
 ### `npm start`
