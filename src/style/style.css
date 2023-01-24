@@ -1,10 +1,5 @@
 :root {
-
-    /*=== LIGHT ===*/
-    /* --primary-color: linear-gradient(0deg, #ACCBEE 0%, #E7F0FD 100%); */
-
-    /*=== DARK ===*/
-    --primary-color: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    --primary-color: linear-gradient(0deg, #ACCBEE 0%, #E7F0FD 100%);
     --secondary-color: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
     --auxiliary-color-one: #B721FF;
     --auxiliary-color-two: #2E82FF;
@@ -237,6 +232,7 @@ form.sign-form {
 .private-route h2 {
     font-size: 1.4rem;
 }
+
 .private-route h2 a {
     font-size: 1rem;
     color: var(--auxiliary-color-one);
